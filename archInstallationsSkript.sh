@@ -10,7 +10,7 @@ echo --------------------------------------------------------------------
 PS3="Choose the device you wanna install arch linux on: "
 select device in $(lsblk -p -o NAME,SIZE)
 do
-    sudo fdisk $device
+    sudo cfdisk $device
     break
 done
 
@@ -81,7 +81,7 @@ grub-install recheck $device
 echo go to GRUB_CMDLINE_LINUX and add between "" cryptdevice=path/to/crypted/device:SYSTEM root=/dev/mapper/SYSTEM
 sleep 5
 vim /etc/default/grub
-gtub-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 
 exit
