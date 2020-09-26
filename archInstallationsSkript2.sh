@@ -20,11 +20,11 @@ do
 	break
 done
 
-echo enter wich partition you wanna use as efi-Partition: (/dev/sda1) 
+echo enter wich partition you wanna use as efi-Partition: /dev/sda1
 read efiPartition
-echo enter wich partition you wanna use as kernel-Partition: (/dev/sda2)
+echo enter wich partition you wanna use as kernel-Partition: /dev/sda2
 read kernelPartition
-echo enter wich partition you wanna use as system-Partition: (/dev/sda3)
+echo enter wich partition you wanna use as system-Partition: /dev/sda3
 read systemPartition
 
 mkfs.msdos -F 32 $efiPartition
