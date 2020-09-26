@@ -42,7 +42,7 @@ mkdir /mnt/boot/efi
 mount $efiPartition /mnt/boot/efi
 
 pacstrap -i /mnt base base-devel linux linux-firmware vim dhcpcd wpa_supplicant netctl dialog grub efibootmgr dosfstools gptfdisk bash-completion git
-genfsrab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
 PS3="Choose a timezone: "
