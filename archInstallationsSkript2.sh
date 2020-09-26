@@ -1,6 +1,7 @@
 #!/bin/bash
 loadkeys de
 echo ----------------------------------------
+echo if you want to connect wifi 
 echo device list
 echo station DEVICE scan
 echo station DEVICE get-networks
